@@ -37,3 +37,8 @@ jobs:
     - name: Test with pytest
       run: |
         pytest
+        - name: Generate Report
+        pip install coverage
+        coverage report
+    - name: Upload Coverage to Codecov
+      uses: codecov/codecov-action@v2
